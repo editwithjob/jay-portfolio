@@ -462,9 +462,9 @@ export default function Showreel() {
               Featured Motion
             </p>
 
-            <h2 className="font-heading text-5xl uppercase leading-[0.86] tracking-[-0.06em] text-white">
-              IN <span className="italic text-orange-500">MOTION.</span>
-            </h2>
+          <h2 className="font-heading text-5xl uppercase leading-[0.86] tracking-[-0.06em] text-white">
+            TOP PERFORMING <span className="italic text-orange-500">ADS.</span>
+          </h2>
 
             <p className="mt-5 text-[11px] uppercase tracking-[0.34em] text-white/42">
               Selected edits that move with intent

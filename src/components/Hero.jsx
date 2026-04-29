@@ -97,18 +97,18 @@ export default function Hero() {
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               className="mb-8 text-[10px] uppercase tracking-[0.45em] text-orange-500"
             >
-              Video Editor • Motion Storytelling • Premium Creative
+              Video Editor • Creative Strategists • Graphic Designing
             </motion.p>
 
             <motion.h1
               initial={{ y: 60, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="font-heading text-[15vw] leading-[0.86] tracking-[-0.085em] text-white md:text-[9.5vw] lg:text-[7vw]"
+              className="font-heading leading-[0.9] tracking-[-0.085em] text-white
+                        text-[11vw] sm:text-[12vw] md:text-[9.5vw] lg:text-[7vw]"
             >
-              FROM CONCEPT
-              <br />
-              <span className="text-orange-500">TO CONVERSION</span>
+              <span className="block">FROM CONCEPT</span>
+              <span className="block text-orange-500">TO CONVERSION</span>
             </motion.h1>
 
             <motion.div
