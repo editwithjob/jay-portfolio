@@ -11,25 +11,28 @@ const reels = [
     id: 1,
     label: 'UGC Videos',
     title: 'Pearla Menopause Toothpaste',
-    video: '/videos/reels/ugc12.mp4',
+    video: 'https://res.cloudinary.com/dsel6dsjn/video/upload/q_auto,f_auto/v1777652940/ugc12_qdrtwc.mp4',
+    sourceType: 'cloudinary',
     description:
       'This 95% AI-generated video ad replicates a highly targeted, authentic user testimonial for menopausal oral care, almost completely eliminating the need for physical shoots and actors. Deployed as the primary creative for a Meta Ads direct-response campaign, it was a massive success, generating over 220 unit sales and achieving an outstanding 5.6x Return on Ad Spend (ROAS). By leveraging compelling AI visuals and an empathetic hook to address a specific niche pain point, this campaign powerfully demonstrates how AI-driven content can scale and deliver highly profitable e-commerce results.',
     orientation: 'portrait',
   },
-  {
-    id: 2,
-    label: 'UGC Videos',
-    title: 'Syncify Sketchtab Duo Pro',
-    video: '/videos/reels/ugc11.mp4',
-    description:
-      'This AI-driven video ad combined authentic UGC-style storytelling with dynamic product demonstrations to position the brand as a bridge between traditional and digital art. Deployed as a direct-response Meta campaign, it generated 164+ unit sales in October 2025 alone and delivered a highly profitable 5.2x ROAS.',
-    orientation: 'portrait',
-  },
+{
+  id: 2,
+  label: 'UGC Videos',
+  title: 'Syncify Sketchtab Duo Pro',
+  video: 'https://res.cloudinary.com/dsel6dsjn/video/upload/q_auto,f_auto/v1777652920/ugc11_domzqq.mp4',
+  sourceType: 'cloudinary',
+  description:
+    'This AI-driven video ad combined authentic UGC-style storytelling with dynamic product demonstrations to position the brand as a bridge between traditional and digital art. Deployed as a direct-response Meta campaign, it generated 164+ unit sales in October 2025 alone and delivered a highly profitable 5.2x ROAS.',
+  orientation: 'portrait',
+},
   {
     id: 3,
     label: 'UGC Videos',
     title: 'Syncify Sketchtab Duo Pro 2 (FULL AI) ',
-    video: '/videos/reels/ugcai11.mp4',
+    video: 'https://res.cloudinary.com/dsel6dsjn/video/upload/q_auto,f_auto/v1777652921/ugcai11_qycpby.mp4',
+    sourceType: 'cloudinary',
     description:
       'This 100% AI-generated video ad replicates an authentic user testimonial without the need for actors or a physical production crew. Deployed as the sole creative for a Meta Ads direct-response campaign, it successfully generated over 50 unit sales and achieved a highly profitable 4.2x Return on Ad Spend (ROAS), proving that fully AI-produced content can drive immediate and tangible e-commerce revenue.',
     orientation: 'portrait',
@@ -38,7 +41,8 @@ const reels = [
     id: 4,
     label: 'UGC Videos',
     title: 'Pearla Menopause Toothpaste',
-    video: '/videos/reels/ugc12.mp4',
+    video: 'https://res.cloudinary.com/dsel6dsjn/video/upload/q_auto,f_auto/v1777652940/ugc12_qdrtwc.mp4',
+    sourceType: 'cloudinary',
     description:
       'This 80% AI-generated video ad replicates a highly targeted, authentic user testimonial for menopausal oral care, significantly reducing the need for physical shoots and actors. Deployed as the primary creative for a Meta Ads direct-response campaign, it successfully generated over 63 unit sales and achieved a highly profitable 4.8x Return on Ad Spend (ROAS). By addressing a specific niche pain point through compelling AI-assisted visuals and an empathetic hook, this campaign proves how AI-driven content can deliver immediate e-commerce results.',
     orientation: 'portrait',
@@ -47,7 +51,8 @@ const reels = [
     id: 5,
     label: 'UGC Videos',
     title: 'Save Auto Max',
-    video: '/videos/reels/ugc110.mp4',
+    video: 'https://res.cloudinary.com/dsel6dsjn/video/upload/q_auto,f_auto/v1777652920/ugc110_tlxzti.mp4',
+    sourceType: 'cloudinary',
     description:
       'This AI-driven video ad became a long-term winning creative, running successfully on Meta Ads from December 2024 to December 2025. It consistently scaled performance, helped generate six-figure monthly revenue, and delivered an exceptional 6.4x ROAS—ultimately leading the client to upgrade my retainer from $1,000 to $7,500 per month.',
     orientation: 'portrait',
@@ -155,6 +160,59 @@ function getPose(relative) {
   return POSES.hiddenNext;
 }
 
+function ReelPreview({ item, className = '' }) {
+  if (item.sourceType === 'drive') {
+    return (
+      <iframe
+        src={item.video}
+        title={`${item.title} preview`}
+        className={`pointer-events-none absolute inset-0 h-full w-full bg-black ${className}`}
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+      />
+    );
+  }
+
+  return (
+    <video
+      src={`${item.video}#t=0.1`}
+      muted
+      playsInline
+      preload="metadata"
+      className={`absolute inset-0 h-full w-full object-cover grayscale opacity-80 transition-all duration-700 group-hover:scale-[1.03] group-hover:grayscale-0 group-hover:opacity-100 ${className}`}
+    />
+  );
+}
+
+function ReelPlayer({ item, videoRef }) {
+  if (item.sourceType === 'drive') {
+    return (
+      <iframe
+        src={item.video}
+        title={item.title}
+        className="absolute inset-0 h-full w-full bg-black"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+      />
+    );
+  }
+
+  return (
+    <video
+      ref={videoRef}
+      src={item.video}
+      className="absolute inset-0 h-full w-full object-contain bg-black"
+      autoPlay
+      loop
+      controls
+      playsInline
+      preload="metadata"
+      controlsList="nofullscreen nodownload noremoteplayback"
+      disablePictureInPicture
+    />
+  );
+}
+
 function MobileReelCard({ item, onOpen }) {
   return (
     <button
@@ -162,12 +220,9 @@ function MobileReelCard({ item, onOpen }) {
       onClick={() => onOpen(item)}
       className="group relative h-[22rem] w-full overflow-hidden rounded-[24px] border border-white/10 bg-black text-left"
     >
-      <video
-        src={`${item.video}#t=0.1`}
-        muted
-        playsInline
-        preload="metadata"
-        className="absolute inset-0 h-full w-full object-cover grayscale opacity-75 transition-all duration-700 group-active:scale-[1.02] group-active:grayscale-0 group-active:opacity-100"
+      <ReelPreview
+        item={item}
+        className="opacity-75 transition-all duration-700 group-active:scale-[1.02] group-active:grayscale-0 group-active:opacity-100"
       />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
@@ -399,13 +454,7 @@ export default function Showreel() {
                   transform: 'translate3d(0, 0, 0)',
                 }}
               >
-                <video
-                  src={`${item.video}#t=0.1`}
-                  muted
-                  playsInline
-                  preload="metadata"
-                  className="absolute inset-0 h-full w-full object-cover grayscale opacity-80 transition-all duration-700 group-hover:scale-[1.03] group-hover:grayscale-0 group-hover:opacity-100"
-                />
+                <ReelPreview item={item} />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/24 to-transparent" />
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-500/0 to-transparent opacity-0 transition-opacity duration-500 group-hover:via-orange-500/70 group-hover:opacity-100" />
@@ -458,13 +507,9 @@ export default function Showreel() {
 
         <div className="relative mx-auto max-w-xl">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[10px] uppercase tracking-[0.42em] text-orange-500">
-              Featured Motion
-            </p>
-
-          <h2 className="font-heading text-5xl uppercase leading-[0.86] tracking-[-0.06em] text-white">
-            TOP PERFORMING <span className="italic text-orange-500">ADS.</span>
-          </h2>
+            <h2 className="font-heading text-5xl uppercase leading-[0.86] tracking-[-0.06em] text-white">
+              TOP PERFORMING <span className="italic text-orange-500">ADS.</span>
+            </h2>
 
             <p className="mt-5 text-[11px] uppercase tracking-[0.34em] text-white/42">
               Selected edits that move with intent
@@ -522,18 +567,7 @@ export default function Showreel() {
                               : 'aspect-[9/16]'
                           } ${isFrameFullscreen ? '!aspect-auto h-screen w-screen' : ''}`}
                         >
-                          <video
-                            ref={modalVideoRef}
-                            src={activeReel.video}
-                            className="absolute inset-0 h-full w-full object-contain bg-black"
-                            autoPlay
-                            loop
-                            controls
-                            playsInline
-                            preload="metadata"
-                            controlsList="nofullscreen nodownload noremoteplayback"
-                            disablePictureInPicture
-                          />
+                          <ReelPlayer item={activeReel} videoRef={modalVideoRef} />
 
                           <button
                             type="button"
