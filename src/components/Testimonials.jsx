@@ -5,7 +5,7 @@ import { X, Play, ArrowUpRight, Maximize2, Minimize2 } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: 'Client One',
+    name: 'Brian Kang',
     role: 'Brand / Paid Social',
     title: 'Strong Creative Judgment',
     quote:
