@@ -23,6 +23,26 @@ const testimonials = [
     video: '/videos/testimonials/testimonial2.mp4',
     orientation: 'portrait',
   },
+  {
+  id: 3,
+  name: 'Erick Sanchez',
+  role: 'Short Form / Long Form Creator',
+  title: 'Massive Social Impact',
+  quote:
+    'Jay played a major role in helping turn my live content into powerful short-form videos. His editing helped create clips that reached millions of views and made the message more impactful, emotional, and easy for people to connect with.',
+  video: '/videos/testimonials/erick.mp4',
+  orientation: 'portrait',
+},
+{
+  id: 4,
+  name: 'Nate Peter',
+  role: 'CMO / Ads & Creative Strategy',
+  title: 'Built for Creative Performance',
+  quote:
+    'Jay understands the balance between creative quality and performance. His work shows strong attention to hooks, pacing, and visual direction, which are all important when building ads and creatives that actually get attention.',
+  video: '/videos/testimonials/nate.mp4',
+  orientation: 'portrait',
+},
 ];
 
 const imageTestimonials = [
@@ -56,27 +76,20 @@ const imageTestimonials = [
   },
   {
     id: 5,
-    name: 'Erick Sanchez',
-    role: 'TikTok & YouTube Creator',
-    image: '/tesitimonial/erick.png',
-    avatar: '/tesitimonial/avatars/erick.jpg',
-  },
-  {
-    id: 6,
     name: 'Max Louise',
     role: 'Influencer',
     image: '/tesitimonial/max.png',
     avatar: '/tesitimonial/avatars/max.jpg',
   },
   {
-    id: 7,
+    id: 6,
     name: 'Kohl',
     role: 'Hydro Vitality',
     image: '/tesitimonial/kohl.png',
     avatar: '/tesitimonial/avatars/kohl.jpg',
   },
   {
-    id: 8,
+    id: 7,
     name: 'David',
     role: 'GPG Real Estate & Media',
     image: '/tesitimonial/david.png',
