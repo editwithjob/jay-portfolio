@@ -206,8 +206,8 @@ export default function AboutTimeline() {
         description:
           'Now focused on building creative with stronger direction, sharper hooks, and more intentional performance. The work has evolved beyond editing into strategy, creative planning, and developing systems that help brands produce content with clearer conversion intent.',
         details: [
-          { label: 'Focus', value: 'Creative strategy, hooks, and performance structure' },
-          { label: 'Current Work', value: 'Paid social, UGC systems, visual direction' },
+          { label: 'Focus', value: 'Strategizing, directing, quality control' },
+          { label: 'Current Work', value: 'Researching and creating briefs for a creative team' },
         ],
         image:
           'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1400',
@@ -345,7 +345,7 @@ export default function AboutTimeline() {
           </h2>
 
           <p className="mt-5 text-[11px] uppercase tracking-[0.34em] text-white/40 md:text-sm">
-            Just a guy from the Philippines
+            Just a guy that makes people feel
           </p>
         </motion.div>
 

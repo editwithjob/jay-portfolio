@@ -97,7 +97,7 @@ export default function Hero() {
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               className="mb-8 text-[10px] uppercase tracking-[0.45em] text-orange-500"
             >
-              Video Editor • Creative Strategists • Graphic Designing
+              Video Editor • Creative Strategists • Graphic Designer
             </motion.p>
 
             <motion.h1
