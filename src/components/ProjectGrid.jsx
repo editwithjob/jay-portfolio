@@ -13,11 +13,11 @@ const projects = [
   {
     id: 1,
     cat: 'UGC Videos',
-    title: 'Hook-Driven UGC',
+    title: 'Syncify Sketchtab Duo Pro',
     mediaType: 'video',
     src: 'https://res.cloudinary.com/dsel6dsjn/video/upload/q_auto,f_auto/v1777652920/ugc11_domzqq.mp4',
     sourceType: 'cloudinary',
-    desc: 'Native-style video creatives built for paid social, stronger retention, and higher conversion intent.',
+    desc: 'This AI-driven video ad combined authentic UGC-style storytelling with dynamic product demonstrations to position the brand as a bridge between traditional and digital art. Deployed as a direct-response Meta campaign, it generated 164+ unit sales in October 2025 alone and delivered a highly profitable 5.2x ROAS.',
     size: 'hero',
     orientation: 'portrait',
   },
@@ -35,60 +35,60 @@ const projects = [
   {
     id: 3,
     cat: 'UGC Graphics',
-    title: 'Static Ad Creatives',
+    title: 'ciúb campaign - Winner Variation',
     mediaType: 'image',
     src: '/images/graphics/graphics1.png',
-    desc: 'High-converting graphic concepts built for offers, hooks, and scroll-stopping paid placements.',
+    desc: 'Deployed as a primary conversion asset in a direct-response paid social campaign, this straightforward, benefit-driven design generated 850+ direct purchases at an efficient $14.20 CPA while delivering a profitable 3.4x ROAS.',
     size: 'small',
     orientation: 'portrait',
   },
   {
     id: 4,
     cat: 'UGC Graphics',
-    title: 'Offer-Driven Visuals',
+    title: 'Pet Insurance - Winner Variations',
     mediaType: 'image',
     src: '/images/graphics/graphics2.png',
-    desc: 'Graphic-based creatives designed to make promotions, pricing, and angles feel more premium.',
+    desc: 'Deployed across paid social channels, this single image became a top-performing creative, generating 1,450+ highly qualified leads at an exceptionally low $0.82 CPL while reducing the brand’s overall CAC by 34% over a 60-day campaign.',
     size: 'large',
     orientation: 'portrait',
   },
   {
     id: 5,
     cat: 'UGC Graphics',
-    title: 'Performance Sales Creative',
+    title: 'RxPros monthly package ads',
     mediaType: 'image',
     src: '/images/graphics/graphics3.png',
-    desc: 'Graphic-based creatives built to make pricing, offers, and proof feel more premium and conversion-ready.',
+    desc: 'This single asset generated 22,000+ qualified leads at an efficient $1.15 CPL, significantly scaling the brand’s top-of-funnel acquisition while maintaining a strong lead-to-policy conversion rate.',
     size: 'small',
     orientation: 'portrait',
   },
   {
     id: 6,
     cat: 'UGC Graphics',
-    title: 'Beauty Product Campaign',
+    title: 'Whitening Product Campaign',
     mediaType: 'image',
     src: '/images/graphics/graphics4.png',
-    desc: 'A paid social design system focused on clarity, premium perception, and stronger click intent.',
+    desc: 'This high-trust, benefit-driven layout proved highly effective at capturing high-intent prospects, generating 18,358+ qualified patient leads at a competitive $12.40 CPL—significantly outperforming industry benchmarks for pharmaceutical customer acquisition. The campaign ultimately contributed to RxPros generating $12M+ in gross revenue.',
     size: 'small',
     orientation: 'portrait',
   },
   {
     id: 7,
     cat: 'UGC Graphics',
-    title: 'Conversion Static System',
+    title: 'Pet Insurance - Creative Variations',
     mediaType: 'image',
     src: '/images/graphics/graphics5.png',
-    desc: 'Static creative variations designed for acquisition, testing, and scroll-stopping performance.',
+    desc: 'Deployed across Facebook and Instagram, this single graphic proved highly effective at driving direct response, generating 1,200+ qualified leads at an efficient $3.50 CPL while delivering a profitable 2.8x ROAS over a 30-day campaign.',
     size: 'small',
     orientation: 'portrait',
   },
   {
     id: 8,
     cat: 'UGC Graphics',
-    title: 'Premium Product Static',
+    title: 'ciúb - Winner Variation',
     mediaType: 'image',
     src: '/images/graphics/graphics6.png',
-    desc: 'Premium product-led graphic treatment designed to elevate perceived value and click-through intent.',
+    desc: 'Deployed as a core asset in a direct-response paid social campaign, this variation successfully captured high-intent users, generating 1,800+ qualified quote requests at an efficient $4.50 CPL while driving a profitable 3.1x ROAS.',
     size: 'small',
     orientation: 'portrait',
   },
@@ -145,28 +145,6 @@ const projects = [
     sourceType: 'cloudinary',
     desc: 'Long-form content shaped for stronger storytelling, cleaner pacing, and deeper viewer retention.',
     size: 'wide',
-    orientation: 'portrait',
-  },
-  {
-    id: 14,
-    cat: 'Real Estate Videos',
-    title: 'Luxury Property Tour',
-    mediaType: 'video',
-    src: '/videos/reels/re2.mp4',
-    sourceType: 'local',
-    desc: 'Premium real estate edits designed to elevate listings, atmosphere, and buyer perception.',
-    size: 'small',
-    orientation: 'portrait',
-  },
-  {
-    id: 15,
-    cat: 'Real Estate Videos',
-    title: 'Listing Showcase',
-    mediaType: 'video',
-    src: '/videos/reels/re1.mp4',
-    sourceType: 'local',
-    desc: 'Property-focused visuals built for cleaner presentation, stronger mood, and higher perceived value.',
-    size: 'small',
     orientation: 'portrait',
   },
   {
@@ -605,24 +583,52 @@ export default function ProjectGrid() {
           </motion.div>
         )}
       </AnimatePresence>
-          <div className="mt-16 flex justify-center">
-        <a
-          href="https://drive.google.com/drive/folders/1eRvvR1GAyF6xQM1Y5cd80wF3eB4tZMso"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-white/12 bg-white/[0.035] px-8 py-4 text-[11px] uppercase tracking-[0.38em] text-white/85 shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-[2px] hover:border-orange-500/40 hover:bg-orange-500/[0.08] hover:text-white hover:shadow-[0_0_0_1px_rgba(255,140,0,0.15),0_18px_60px_rgba(255,120,0,0.08)]"
-        >
-          <span className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,140,0,0.08),transparent_65%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+<div className="mt-16 flex flex-col items-center justify-center">
+  <div className="mb-8 text-center">
+    <p className="mb-3 text-[10px] uppercase tracking-[0.42em] text-orange-500">
+      Portfolio Library
+    </p>
 
-          <span className="absolute inset-y-0 left-[-30%] w-[30%] rotate-12 bg-white/10 blur-xl transition-all duration-700 group-hover:left-[120%]" />
+    <h3 className="font-heading text-3xl uppercase leading-[0.9] tracking-[-0.05em] text-white sm:text-4xl md:text-5xl">
+      SEE ALL MY <span className="italic text-orange-500">WORKS HERE.</span>
+    </h3>
+  </div>
 
-          <span className="relative z-10">View All My Works</span>
+  <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
+    {[
+      {
+        label: 'Videos',
+        href: 'https://drive.google.com/drive/folders/1eRvvR1GAyF6xQM1Y5cd80wF3eB4tZMso',
+      },
+      {
+        label: 'Graphics',
+        href: 'https://drive.google.com/drive/folders/1pe1fBbySHRJYTqQoVq8Z76ZAwyA860m6',
+      },
+      {
+        label: 'Meta Ads',
+        href: 'https://drive.google.com/drive/folders/1XpZmkhqIHQLKF-bvPEPganrnNvMSKae8',
+      },
+    ].map((link) => (
+      <a
+        key={link.label}
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-full border border-white/12 bg-white/[0.035] px-7 py-4 text-[10px] uppercase tracking-[0.34em] text-white/85 shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-[2px] hover:border-orange-500/40 hover:bg-orange-500/[0.08] hover:text-white hover:shadow-[0_0_0_1px_rgba(255,140,0,0.15),0_18px_60px_rgba(255,120,0,0.08)] sm:w-auto sm:px-8"
+      >
+        <span className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,140,0,0.08),transparent_65%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-          <span className="relative z-10 text-orange-500 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
-            →
-          </span>
-        </a>
-      </div>
+        <span className="absolute inset-y-0 left-[-30%] w-[30%] rotate-12 bg-white/10 blur-xl transition-all duration-700 group-hover:left-[120%]" />
+
+        <span className="relative z-10">{link.label}</span>
+
+        <span className="relative z-10 text-orange-500 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
+          →
+        </span>
+      </a>
+    ))}
+  </div>
+</div>
     </section>
   );
 }

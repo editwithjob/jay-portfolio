@@ -11,7 +11,7 @@ const reels = [
     id: 1,
     label: 'UGC Videos',
     title: 'Pearla Menopause Toothpaste',
-    video: 'https://res.cloudinary.com/dsel6dsjn/video/upload/q_auto,f_auto/v1777652940/ugc12_qdrtwc.mp4',
+    video: 'https://res.cloudinary.com/dsel6dsjn/video/upload/v1778087695/pearla_sd57f5.mp4',
     sourceType: 'cloudinary',
     description:
       'This 95% AI-generated video ad replicates a highly targeted, authentic user testimonial for menopausal oral care, almost completely eliminating the need for physical shoots and actors. Deployed as the primary creative for a Meta Ads direct-response campaign, it was a massive success, generating over 220 unit sales and achieving an outstanding 5.6x Return on Ad Spend (ROAS). By leveraging compelling AI visuals and an empathetic hook to address a specific niche pain point, this campaign powerfully demonstrates how AI-driven content can scale and deliver highly profitable e-commerce results.',
